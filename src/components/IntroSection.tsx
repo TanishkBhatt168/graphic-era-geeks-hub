@@ -1,10 +1,20 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Lightbulb, Rocket, Heart } from "lucide-react";
+import introBg from "@/assets/intro-bg.jpg";
 
 export function IntroSection() {
   return (
-    <section id="intro" className="py-20 bg-gradient-to-br from-primary-light/10 via-background to-accent/5">
-      <div className="container mx-auto px-4">
+    <section id="intro" className="py-20 relative overflow-hidden">
+      {/* Background Image */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{
+          backgroundImage: `url(${introBg})`,
+        }}
+      >
+        <div className="absolute inset-0 bg-background/90 dark:bg-background/85"></div>
+      </div>
+      <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 gradient-text">
             Welcome to Graphic Geeks
