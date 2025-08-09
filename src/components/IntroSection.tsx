@@ -1,10 +1,11 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Lightbulb, Rocket, Heart } from "lucide-react";
+import { Globe3D } from "@/components/Globe3D";
 import introBg from "@/assets/intro-bg.jpg";
 
 export function IntroSection() {
   return (
-    <section id="intro" className="py-20 relative overflow-hidden">
+    <section id="intro" className="py-20 relative overflow-hidden min-h-screen flex items-center">
       {/* Background Image */}
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
@@ -14,6 +15,10 @@ export function IntroSection() {
       >
         <div className="absolute inset-0 bg-background/90 dark:bg-background/85"></div>
       </div>
+
+      {/* 3D Globe Background */}
+      <Globe3D />
+
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 gradient-text">
